@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rexml'
 
 
 group :development, :test do
@@ -29,6 +30,9 @@ group :development do
   gem 'listen', '~> 3.3'
 
   gem 'spring'
+  gem 'letter_opener_web'
+  gem 'dotenv-rails'
+  gem 'faker'
 end
 
 group :test do

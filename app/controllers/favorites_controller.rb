@@ -4,7 +4,6 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    binding.pry
     favorite = current_user.favorites.create(picture_id: params[:picture_id])
     redirect_to pictures_path, notice: "#{favorite.picture.user.name}さんの投稿をお気に入りにしたぞ"
   end
