@@ -1,2 +1,27 @@
-<h1>Favorites#index</h1>
-<p>Find me in app/views/favorites/index.html.erb</p>
+<h1>お気に入りページ</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>投稿者名</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>画像</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+        <td><%= @favorite.picture.name%></td>
+        <td><%= @favorite.picture.title %></td>
+        <td><%= @favorite.picture.content %></td>
+        <td><%= image_tag(picture.image.url, style: 'width: 200px; height: 180px;') if picture.image && picture.image.url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '投稿一覧', pictures_path %>

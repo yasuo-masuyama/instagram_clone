@@ -15,6 +15,11 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :image %>
+  <%= image_tag(@user.image.url, style: 'width: 200px; height: 180px;') if @user.image && @user.image.url %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+
   <%= f.label :email %>
   <%= f.email_field :email %>
 
