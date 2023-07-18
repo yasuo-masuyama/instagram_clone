@@ -3,7 +3,7 @@ module PicturesHelper
     if action_name == 'new'
         confirm_pictures_path
     elsif action_name == 'edit'
-        pictures_path
+        picture_path(@picture.id)
     end
   end
 end
